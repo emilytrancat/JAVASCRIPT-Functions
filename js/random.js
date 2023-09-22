@@ -1,8 +1,19 @@
-function alertRandom() {
+// How to call a function:
+
+// function alertRandomNumber() {
+//     const randomNumber = Math.floor( Math.random() * 6 ) +1;
+//     alert(randomNumber);
+// }
+// alertRandomNumber();
+// alertRandomNumber();
+// alertRandomNumber();
+
+
+// How to return a function:
+
+function getRandomNumber() {
     const randomNumber = Math.floor( Math.random() * 6 ) +1;
-    alert(randomNumber);
+    return randomNumber;
 }
-alertRandom();
-alertRandom();
-alertRandom();
-alertRandom();
+const dieRoll = getRandomNumber();
+// console.log( getRandomNumber() );
