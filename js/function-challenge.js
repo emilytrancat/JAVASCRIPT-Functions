@@ -14,9 +14,14 @@ keyword (const, let, var) ASSIGNED to the Math.floor stuff. Don't just put it bl
 
 
 function finalAnswer(lower = 1, higher = 6) {
+    if ( isNaN(lower) || isNaN(higher) ) {
+        throw Error ('Both arguments must be numbers.');
+    }
     const answer = Math.floor( Math.random() * (higher - lower + 1) ) + lower;
     return answer;
     // can also do: return Math.floor( Math.random() * (higher - lower + 1) ) + lower;
 }
 console.log( finalAnswer(100,900));
 console.log( `${finalAnswer(1,10)} is a random number between 1 and 10`);
+console.log (finalAnswer (8, "twenty"));
+// console.log (finalAnswer (undefined, undefined)); put this in the console to use default values, which are 1 and 6. 
